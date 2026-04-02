@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "ResumeAI Pro",
+    "description": "Build ATS-optimized resumes in minutes with AI-powered suggestions and 100+ professional templates.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "AI suggestions", "Cover letter builder"],
+    "icon": "writing"
+  },
+  {
+    "id": 2,
+    "name": "DesignFlow",
+    "description": "A powerful design tool for creating stunning visuals, UI mockups, and brand assets effortlessly.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Vector editing", "Component library", "Team collaboration", "Cloud storage 50GB", "Export to SVG/PNG"],
+    "icon": "design"
+  },
+  {
+    "id": 3,
+    "name": "SocialBoost",
+    "description": "Schedule, analyze, and grow your social media presence across all major platforms from one dashboard.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "bestseller",
+    "features": ["10 social accounts", "Post scheduling", "Analytics dashboard", "Hashtag suggestions", "Auto-reply bot"],
+    "icon": "social"
+  },
+  {
+    "id": 4,
+    "name": "ShopMaster",
+    "description": "Launch and manage your e-commerce store with inventory tracking, payment gateways, and smart analytics.",
+    "price": 199,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Unlimited products", "Payment gateway", "Inventory tracking", "SEO tools", "24/7 support"],
+    "icon": "shopping"
+  },
+  {
+    "id": 5,
+    "name": "PortfolioX",
+    "description": "Create a stunning developer or designer portfolio website with zero code in under 10 minutes.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Custom domain", "Mobile responsive", "Project showcase", "Contact form", "Analytics"],
+    "icon": "portfolio"
+  },
+  {
+    "id": 6,
+    "name": "OpsCommand",
+    "description": "All-in-one business operations suite for project management, invoicing, and team productivity.",
+    "price": 299,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "bestseller",
+    "features": ["Unlimited projects", "Invoicing & billing", "Team workspaces", "Time tracking", "CRM integration"],
+    "icon": "operation"
+  },
+  {
+    "id": 7,
+    "name": "ContentCraft",
+    "description": "AI writing assistant that helps you create blog posts, ads, emails, and social content at scale.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["50+ templates", "Long-form writing", "Plagiarism check", "SEO optimizer", "Multi-language"],
+    "icon": "writing"
+  },
+  {
+    "id": 8,
+    "name": "DataLens",
+    "description": "Turn raw data into beautiful interactive dashboards and reports your whole team can understand.",
+    "price": 79,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Unlimited dashboards", "100+ chart types", "Real-time data", "CSV/Excel import", "Share & embed"],
+    "icon": "operation"
+  }
+]
