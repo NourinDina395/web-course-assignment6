@@ -33,6 +33,7 @@ function App() {
       />
       <Steps />
       <Pricing />
+      <CTA />
       <Footer />
       <ToastContainer position="top-right" autoClose={2500} />
     </>
