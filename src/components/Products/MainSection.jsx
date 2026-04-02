@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 const ProductList = ({ productsPromise, cartItems, setCartItems }) => {
   const products = use(productsPromise);
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {products.map((product) => (
@@ -31,47 +30,49 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
       return;
     }
     setCartItems([]);
-    toast.success("🎉 Order placed successfully! Thank you for your purchase!");
+    toast.success("🎉 Order placed successfully!");
   };
 
   return (
-    <section id="products" className="py-14 bg-gray-50">
+    <section id="products" className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        {/* Header with toggle */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-          <div>
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              {activeTab === "products" ? "Available Products" : `My Cart (${cartItems.length})`}
+
+        {/* Section header - inside dashed border box */}
+        <div className="border-2  border-gray-200 rounded-2xl p-8 mb-10">
+          <div className="text-center mb-6">
+            <h2 className="text-4xl font-black text-gray-900 mb-3">
+              Premium Digital Tools
             </h2>
-            <p className="text-gray-500 text-sm mt-1">
-              {activeTab === "products"
-                ? "Choose the tools that power your workflow"
-                : "Review your selected tools"}
+            <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
+              Choose from our curated collection of premium digital products designed to
+              boost your productivity and creativity.
             </p>
           </div>
 
           {/* Toggle buttons */}
-          <div className="flex rounded-full border border-gray-200 overflow-hidden bg-white shadow-sm">
-            <button
-              onClick={() => setActiveTab("products")}
-              className={`px-6 py-2 text-sm font-semibold transition-colors ${
-                activeTab === "products"
-                  ? "bg-violet-600 text-white"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
-              Products
-            </button>
-            <button
-              onClick={() => setActiveTab("cart")}
-              className={`px-6 py-2 text-sm font-semibold transition-colors ${
-                activeTab === "cart"
-                  ? "bg-violet-600 text-white"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
-              Cart ({cartItems.length})
-            </button>
+          <div className="flex justify-center">
+            <div className="flex items-center gap-1 bg-gray-100 rounded-full p-1">
+              <button
+                onClick={() => setActiveTab("products")}
+                className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors ${
+                  activeTab === "products"
+                    ? "bg-violet-600 text-white shadow"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                Products
+              </button>
+              <button
+                onClick={() => setActiveTab("cart")}
+                className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors ${
+                  activeTab === "cart"
+                    ? "bg-violet-600 text-white shadow"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                Cart ({cartItems.length})
+              </button>
+            </div>
           </div>
         </div>
 
@@ -96,10 +97,10 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🛒</div>
                 <h3 className="text-xl font-bold text-gray-700 mb-2">Your cart is empty</h3>
-                <p className="text-gray-400">Go to the Products tab to add tools to your cart.</p>
+                <p className="text-gray-400">Go to the Products tab to add tools.</p>
                 <button
                   onClick={() => setActiveTab("products")}
-                  className="btn bg-violet-600 text-white hover:bg-violet-700 mt-5 rounded-full"
+                  className="bg-violet-600 text-white hover:bg-violet-700 mt-5 px-6 py-2 rounded-full text-sm font-semibold"
                 >
                   Browse Products
                 </button>
@@ -114,8 +115,6 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
                     setCartItems={setCartItems}
                   />
                 ))}
-
-                {/* Summary */}
                 <div className="mt-6 p-5 bg-violet-50 rounded-2xl border border-violet-100">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-600 font-medium">Total ({cartItems.length} items)</span>
@@ -123,7 +122,7 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
                   </div>
                   <button
                     onClick={handleCheckout}
-                    className="btn w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full"
+                    className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 rounded-full transition-colors"
                   >
                     Proceed to Checkout
                   </button>
