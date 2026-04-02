@@ -1,5 +1,5 @@
 import React from "react";
-import { FaYoutube, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       
       {/* Main footer */}
       <div className="container mx-auto px-6 py-12">
-        <div className="border border-gray-700 rounded-2xl p-8">
+        <div className="border rounded-2xl p-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
 
             {/* Logo & desc */}
@@ -60,7 +60,7 @@ const Footer = () => {
                   href="#"
                   className="w-9 h-9 bg-gray-700 hover:bg-violet-600 rounded-full flex items-center justify-center transition-colors"
                 >
-                  <FaYoutube className="text-white text-sm" />
+                  <FaInstagram className="text-white text-sm" />
                 </a>
 
                 <a
