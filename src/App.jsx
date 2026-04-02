@@ -7,6 +7,7 @@ import MainSection from "./components/Products/MainSection";
 import Steps from "./components/Steps/Steps";
 import Pricing from "./components/Pricing/Pricing";
 import Footer from "./components/Footer/Footer";
+import CTA from "./components/CTA/CTA";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

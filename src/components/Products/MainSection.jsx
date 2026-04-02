@@ -56,7 +56,7 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
                 onClick={() => setActiveTab("products")}
                 className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors ${
                   activeTab === "products"
-                    ? "bg-violet-600 text-white shadow"
+                    ? "bg-blue-600 text-white shadow"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -70,7 +70,7 @@ const MainSection = ({ productsPromise, cartItems, setCartItems }) => {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                Cart ({cartItems.length})
+                Carts ({cartItems.length})
               </button>
             </div>
           </div>

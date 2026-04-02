@@ -1,57 +1,63 @@
 import React from "react";
-import rocketImg from "../../assets/rocket.png";
+import { FiUser, FiBox, FiZap } from "react-icons/fi";
 
 const steps = [
   {
     number: "01",
-    title: "Browse & Discover",
-    desc: "Explore our curated catalog of 120+ professional digital tools across design, marketing, development, and more.",
+    icon: <FiUser className="text-violet-600 text-3xl" />,
+    title: "Create Account",
+    desc: "Sign up for free in seconds. No credit card required to get started.",
   },
   {
     number: "02",
-    title: "Add to Cart",
-    desc: "Select the tools that fit your workflow and budget. Mix one-time purchases with monthly subscriptions.",
+    icon: <FiBox className="text-violet-600 text-3xl" />,
+    title: "Choose Products",
+    desc: "Browse our catalog and select the tools that fit your needs.",
   },
   {
     number: "03",
-    title: "Checkout Securely",
-    desc: "Complete your purchase with our encrypted payment system. Instant access delivered to your email.",
-  },
-  {
-    number: "04",
-    title: "Start Building",
-    desc: "Activate your tools and start supercharging your productivity from day one with full support.",
+    icon: <FiZap className="text-violet-600 text-3xl" />,
+    title: "Start Creating",
+    desc: "Download and start using your premium tools immediately.",
   },
 ];
 
 const Steps = () => {
   return (
-    <section id="steps" className="py-16 bg-white">
+    <section id="steps" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-violet-600 font-bold text-sm uppercase tracking-widest">How It Works</span>
-          <h2 className="text-3xl font-extrabold text-gray-900 mt-2">
-            Get started in 4 simple steps
+          <h2 className="text-4xl font-black text-gray-900 mb-3">
+            Get Started In 3 Steps
           </h2>
-          <p className="text-gray-500 mt-2 max-w-md mx-auto">
-            From discovery to deployment — we make it effortless to equip your digital toolkit.
+          <p className="text-gray-400 text-sm">
+            Start using premium digital tools in minutes, not hours.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-10 items-center">
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {steps.map((step) => (
-              <div key={step.number} className="p-5 rounded-2xl border border-gray-100 bg-gray-50 hover:border-violet-200 hover:bg-violet-50 transition-colors">
-                <span className="text-4xl font-black text-violet-200">{step.number}</span>
-                <h3 className="font-bold text-gray-900 text-lg mt-2 mb-1">{step.title}</h3>
-                <p className="text-gray-500 text-sm">{step.desc}</p>
+        {/* Steps grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="bg-white rounded-2xl p-6 relative border border-gray-100 shadow-sm"
+            >
+              {/* Step number badge */}
+              <div className="absolute -top-3 -right-3 w-8 h-8 bg-blue-600 text-white text-xs font-black rounded-full flex items-center justify-center shadow">
+                {step.number}
               </div>
-            ))}
-          </div>
 
-          <div className="flex-shrink-0 hidden lg:block">
-            <img src={rocketImg} alt="Launch" className="w-48 drop-shadow-xl" />
-          </div>
+              {/* Icon circle */}
+              <div className="w-16 h-16 bg-violet-50 rounded-full flex items-center justify-center mb-5 m-20">
+                {step.icon}
+              </div>
+
+              {/* Text */}
+              <h3 className="text-center font-bold text-gray-900 text-lg mb-2">{step.title}</h3>
+              <p className="text-center text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
