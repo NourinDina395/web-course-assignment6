@@ -11,12 +11,12 @@ const Navbar = ({ cartCount }) => {
         {/* Logo */}
         <div>
           <span className="text-2xl font-extrabold">
-            <span className="text-violet-600">Digi</span>
-            <span className="text-gray-900">Tools</span>
+            <span className="text-violet-600">DigiTools</span>
+            <span className="text-gray-900"></span>
           </span>
         </div>
 
-        {/* Nav links - desktop (ONLY lg and above) */}
+        {/* Nav links - desktop */}
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
           <a href="#products" className="hover:text-violet-600 transition-colors">Products</a>
           <a href="#" className="hover:text-violet-600 transition-colors">Features</a>
